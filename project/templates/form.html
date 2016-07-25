@@ -1,0 +1,22 @@
+{% extends 'layout.html' %}
+{% block body %}
+<h4>Hello, {{session['signin_name']}}!</h4>
+<form action="/submit" method="POST">
+  <p>
+    <label for="project_name">Project Name</label>
+    <input type="text" name="project_name">
+  </p>
+  <p>
+    <label for="project_stars">Stars</label>
+    <input type="text" name="project_stars">
+  </p>
+  <p>
+    <label for="project_date">Date</label>
+    <input type="text" name="project_date">
+  </p>
+  <p>
+    <button type="submit">Add New Project</button>
+  </p>
+</form>
+
+{% endblock %}
